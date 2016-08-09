@@ -1,0 +1,8 @@
+env/
+.idea/
+*.pyc
+db_config.txt
+static/suit-ckeditor/ckeditor/*
+static/suit/*
+database.sql
+setup/my_settings.py
