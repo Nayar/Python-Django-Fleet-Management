@@ -8,4 +8,4 @@ database.sql
 setup/my_settings.py
 .sass-cache
 node_modules
-migrations
+migrations/
