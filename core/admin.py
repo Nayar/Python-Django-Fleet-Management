@@ -1,9 +1,10 @@
 from django.contrib import admin
 from models import Vehicles, Travels, Agencies, Sectors, FuelStations, Drivers, VehiclesModels, VehiclesBrands, VehiclesProvenances, VehiclesStatus, Fuels
 
-admin.site.site_header = "Python Fleet Management"
+admin.site.site_header = "Fleet Management"
 
 # Register your models here.
+
 
 @admin.register(Vehicles)
 class VehiclesAdmin(admin.ModelAdmin):

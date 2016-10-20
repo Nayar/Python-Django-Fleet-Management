@@ -1,0 +1,96 @@
+@import "../../vendor/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "../../vendor/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "../../vendor/font-awesome/scss/font-awesome";
+
+$primary_color: #eee;
+$secundary_color: #53a6bf;
+$fosc_color: #6da2bc;
+$hover_color: #377385;
+$dark_color: #2a5765;
+*{
+    font-family: 'ABeeZee', sans-serif;
+}
+body{
+    background: $primary_color; /* For browsers that do not support gradients */
+}
+header{
+    background: #2b5e6d;
+    height: 40px;
+    display: block;
+    a.logo{
+        @include make-lg-column(2);
+        @include make-md-column(2);
+        @include make-sm-column(2);
+        @include make-xs-column(2);
+        height: 40px;
+        text-align: center;
+        color: #FFF;
+        text-decoration: none;
+    }
+    a.logo:hover{
+        background-color: #DDD;
+        color: $hover_color;
+    }
+    a.toogle-menu{
+        height: auto;
+        font-size:28px;
+        text-align: center;
+        color: #EEE;
+        text-decoration: none;
+        padding: 4px;
+    }
+    a.toogle-menu:hover{
+        background-color: #DDD;
+        color: $hover_color;
+    }
+    a.search{
+        height: auto;
+        font-size:23px;
+        text-align: center;
+        color: #EEE;
+        text-decoration: none;
+        padding: 4px;
+        float:right;
+    }
+    a.search:hover{
+        background-color: #DDD;
+        color: $hover_color;
+    }
+    a.user{
+        height: auto;
+        font-size:23px;
+        text-align: center;
+        color: #EEE;
+        text-decoration: none;
+        padding: 4px;
+        float:right;
+    }
+    a.user:hover{
+        background-color: #DDD;
+        color: $hover_color;
+    }
+}
+footer{
+    background-color: $hover_color;
+    min-height: 10px;
+    height: 40px;
+    display: block;
+    padding: 10px;
+    color: #FFF;
+        .copyright{
+            @include make-lg-column(9);
+            @include make-md-column(9);
+            @include make-sm-column(9);
+            @include make-xs-column(9);
+        }
+        .development{
+            text-align: right;
+            @include make-lg-column(3);
+            @include make-md-column(3);
+            @include make-sm-column(3);
+            @include make-xs-column(3);
+            a{
+                color: #FFF;
+            }
+      }
+}
