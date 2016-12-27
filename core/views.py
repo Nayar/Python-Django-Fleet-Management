@@ -7,15 +7,9 @@ from django.contrib import admin
 admin.site.site_header = "Fleet Management"
 
 
-def my_view(request):
+def homepage(request):
     return render(request, "index.html")
 
 
 def car_view(request):
     return render(request, "home.html")
-
-#urlpatterns = [
-#    url(r'^my_view$', my_view, name='main-view'),
-#]
-
-#include(urlpatterns)

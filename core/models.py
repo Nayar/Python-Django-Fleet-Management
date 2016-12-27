@@ -17,6 +17,9 @@ class Agencies(models.Model):
         managed = False
         db_table = 'agencies'
 
+    def __str__(self):
+        return self.title
+
 
 class City(models.Model):
     name = models.CharField(max_length=120, blank=True, null=True)
@@ -27,6 +30,9 @@ class City(models.Model):
         verbose_name_plural = 'Cities'
         managed = False
         db_table = 'city'
+
+    def __str__(self):
+        return self.name
 
 
 class Drivers(models.Model):
@@ -39,6 +45,9 @@ class Drivers(models.Model):
         managed = False
         db_table = 'drivers'
 
+    def __str__(self):
+        return self.name
+
 
 class FuelStations(models.Model):
     name = models.CharField(max_length=160, blank=True, null=True)
@@ -50,6 +59,9 @@ class FuelStations(models.Model):
         managed = False
         db_table = 'fuel_stations'
 
+    def __str__(self):
+        return self.name
+
 
 class Fuels(models.Model):
     name = models.CharField(max_length=160, blank=True, null=True)
@@ -60,7 +72,7 @@ class Fuels(models.Model):
         managed = False
         db_table = 'fuels'
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 
@@ -74,7 +86,7 @@ class Sectors(models.Model):
         managed = False
         db_table = 'sectors'
 
-    def __unicode__(self):
+    def __str__(self):
         return self.title
 
 
@@ -88,6 +100,9 @@ class States(models.Model):
         verbose_name_plural = 'States'
         managed = False
         db_table = 'states'
+
+    def __str__(self):
+        return self.name
 
 
 class Supplies(models.Model):
@@ -129,6 +144,9 @@ class Users(models.Model):
         managed = False
         db_table = 'users'
 
+    def __str__(self):
+        return self.name
+
 
 class Vehicles(models.Model):
     plate = models.CharField(max_length=160, blank=True, null=True)
@@ -155,6 +173,9 @@ class Vehicles(models.Model):
         managed = False
         db_table = 'vehicles'
 
+    def __str__(self):
+        return self.plate
+
 
 class VehiclesBrands(models.Model):
     name = models.CharField(max_length=160, blank=True, null=True)
@@ -165,7 +186,7 @@ class VehiclesBrands(models.Model):
         managed = False
         db_table = 'vehicles_brands'
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 
@@ -179,7 +200,7 @@ class VehiclesModels(models.Model):
         managed = False
         db_table = 'vehicles_models'
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 
@@ -192,7 +213,7 @@ class VehiclesProvenances(models.Model):
         managed = False
         db_table = 'vehicles_provenances'
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 
@@ -205,5 +226,5 @@ class VehiclesStatus(models.Model):
         managed = False
         db_table = 'vehicles_status'
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
