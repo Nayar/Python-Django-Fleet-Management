@@ -3,7 +3,7 @@
 #   * Rearrange models' order
 #   * Make sure each model has one field with primary_key=True
 #   * Make sure each ForeignKey has `on_delete` set to the desired behavior.
-#   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
+#   * Remove `` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 
@@ -14,7 +14,7 @@ class Agencies(models.Model):
     class Meta:
         verbose_name = 'Agency'
         verbose_name_plural = 'Agencies'
-        managed = False
+        
         db_table = 'agencies'
 
     def __str__(self):
@@ -28,7 +28,7 @@ class City(models.Model):
     class Meta:
         verbose_name = 'City'
         verbose_name_plural = 'Cities'
-        managed = False
+        
         db_table = 'city'
 
     def __str__(self):
@@ -42,7 +42,7 @@ class Drivers(models.Model):
     class Meta:
         verbose_name = 'Driver'
         verbose_name_plural = 'Drivers'
-        managed = False
+        
         db_table = 'drivers'
 
     def __str__(self):
@@ -56,7 +56,7 @@ class FuelStations(models.Model):
     class Meta:
         verbose_name = 'Fuel Station'
         verbose_name_plural = 'Fuel Stations'
-        managed = False
+        
         db_table = 'fuel_stations'
 
     def __str__(self):
@@ -69,7 +69,7 @@ class Fuels(models.Model):
     class Meta:
         verbose_name = 'Fuel'
         verbose_name_plural = 'Fuel'
-        managed = False
+        
         db_table = 'fuels'
 
     def __str__(self):
@@ -78,12 +78,12 @@ class Fuels(models.Model):
 
 class Sectors(models.Model):
     title = models.CharField(max_length=160, blank=True, null=True)
-    agency = models.ForeignKey(Agencies, models.DO_NOTHING, db_column='agency', blank=True, null=True)
+    agency = models.ForeignKey(Agencies, on_delete=models.DO_NOTHING, db_column='agency', blank=True, null=True)
 
     class Meta:
         verbose_name = 'Sector'
         verbose_name_plural = 'Sectors'
-        managed = False
+        
         db_table = 'sectors'
 
     def __str__(self):
@@ -98,7 +98,7 @@ class States(models.Model):
     class Meta:
         verbose_name = 'State'
         verbose_name_plural = 'States'
-        managed = False
+        
         db_table = 'states'
 
     def __str__(self):
@@ -116,7 +116,7 @@ class Supplies(models.Model):
     class Meta:
         verbose_name = 'Supply'
         verbose_name_plural = 'Supplies'
-        managed = False
+        
         db_table = 'supplies'
 
 
@@ -129,7 +129,7 @@ class Travels(models.Model):
     class Meta:
         verbose_name = 'Travel'
         verbose_name_plural = 'Travels'
-        managed = False
+        
         db_table = 'travels'
 
 
@@ -141,7 +141,7 @@ class Users(models.Model):
     class Meta:
         verbose_name = 'User'
         verbose_name_plural = 'Users'
-        managed = False
+        
         db_table = 'users'
 
     def __str__(self):
@@ -170,7 +170,7 @@ class Vehicles(models.Model):
     class Meta:
         verbose_name = 'Vehicle'
         verbose_name_plural = 'Vehicles'
-        managed = False
+        
         db_table = 'vehicles'
 
     def __str__(self):
@@ -183,7 +183,7 @@ class VehiclesBrands(models.Model):
     class Meta:
         verbose_name = 'Vehicle Brand'
         verbose_name_plural = 'Vehicle Brands'
-        managed = False
+        
         db_table = 'vehicles_brands'
 
     def __str__(self):
@@ -197,7 +197,7 @@ class VehiclesModels(models.Model):
     class Meta:
         verbose_name = 'Vehicle Model'
         verbose_name_plural = 'Vehicle Models'
-        managed = False
+        
         db_table = 'vehicles_models'
 
     def __str__(self):
@@ -210,7 +210,7 @@ class VehiclesProvenances(models.Model):
     class Meta:
         verbose_name = 'Vehicle Provenance'
         verbose_name_plural = 'Vehicle Provenances'
-        managed = False
+        
         db_table = 'vehicles_provenances'
 
     def __str__(self):
@@ -223,7 +223,7 @@ class VehiclesStatus(models.Model):
     class Meta:
         verbose_name = 'Vehicle Status'
         verbose_name_plural = 'Vehicle Status'
-        managed = False
+        
         db_table = 'vehicles_status'
 
     def __str__(self):
